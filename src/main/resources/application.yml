@@ -1,0 +1,48 @@
+# config context path to "/" by setting an empty string
+server:
+  contextPath:
+
+# JACKSON
+spring:
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+  datasource:
+      platform: postgres
+      url: jdbc:postgresql://localhost:5432/spring
+      username: postgres
+      password: postgres
+      driverClassName: org.postgresql.Driver
+  mail:
+      host: smtp.gmail.com
+      port: 587
+      username: krzysztof.lipiec.web.dev@gmail.com
+      password: iiibfhgt1
+      properties:
+        mail:
+          smtp:
+            auth: true
+            starttls:
+              enable: true
+              required: true
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+     
+
+
+jwt:
+  header: Authorization
+  secret: tasksSecret
+  expiration: 604800
+  route:
+    authentication:
+      path: auth
+      refresh: refresh
+
+#logging:
+#  level:
+#    org.springframework:
+#      security: DEBUG

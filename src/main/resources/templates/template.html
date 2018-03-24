@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:remove="all">New Account</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<span>to activate your account please click link below</span>
+<a th:href="${'http://localhost:4200/activate/' + token}" th:text="${'http://localhost:4200/activate/' + token}"></a>
+</body>
+</html>
